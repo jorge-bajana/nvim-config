@@ -59,6 +59,12 @@ Plug 'leafOfTree/vim-vue-plugin'
 " Ayuda para búsquedas (prueba)
 Plug 'cloudhead/neovim-fuzzy'
 
+" JsDocs
+Plug 'heavenshell/vim-jsdoc', { 
+  \ 'for': ['javascript', 'javascript.jsx','typescript'], 
+  \ 'do': 'make install'
+\}
+
 call plug#end()
 
 colorscheme gruvbox
