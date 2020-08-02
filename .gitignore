@@ -1,0 +1,4 @@
+# Ignore all files except config
+*
+!.gitignore
+!init.vim
