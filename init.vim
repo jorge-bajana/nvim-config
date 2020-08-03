@@ -64,6 +64,11 @@ Plug 'heavenshell/vim-jsdoc', {
   \ 'for': ['javascript', 'javascript.jsx','typescript'], 
   \ 'do': 'make install'
 \}
+" Plugin para mantener la sesión de los archivos modificados
+Plug 'thaerkh/vim-workspace'
+
+" Reabre los archivos en el punto donde los dejaste
+Plug 'farmergreg/vim-lastplace'
 
 call plug#end()
 
@@ -119,4 +124,8 @@ let g:coc_global_extensions = [
 " Test config
 "let g:mocha_js_command = "!PORT=8999 NODE_ENV=test mocha {spec}"
 "let test#javascript#mocha#file_pattern = '.*\.js'
+
+" Workspace config
+nnoremap <leader>s :ToggleWorkspace<CR>
+
 
