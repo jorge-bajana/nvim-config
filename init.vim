@@ -27,8 +27,8 @@ Plug 'christoomey/vim-tmux-navigator'
 " Plugin para soporte de Vuejs
 " Plug 'posva/vim-vue'
 " Buscador de archivos
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Plug 'junegunn/fzf.vim'
 " Colores para JavaScript
 Plug 'pangloss/vim-javascript'
 " Autocompletado
@@ -69,6 +69,12 @@ Plug 'thaerkh/vim-workspace'
 
 " Reabre los archivos en el punto donde los dejaste
 Plug 'farmergreg/vim-lastplace'
+
+" Pone el código bonito
+Plug 'zeekay/vim-beautify'
+
+" Pug
+Plug 'digitaltoad/vim-pug'
 
 call plug#end()
 
