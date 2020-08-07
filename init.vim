@@ -17,7 +17,8 @@ set bg=dark
 call plug#begin('~/.vim/plugged')
 
 " Temas
-Plug 'morhetz/gruvbox'
+" Plug 'morhetz/gruvbox'
+Plug 'sickill/vim-monokai'
 
 " IDE
 " Plugin para ver el arbol de archivos del directorio
@@ -65,10 +66,10 @@ Plug 'heavenshell/vim-jsdoc', {
   \ 'do': 'make install'
 \}
 " Plugin para mantener la sesión de los archivos modificados
-Plug 'thaerkh/vim-workspace'
+" Plug 'thaerkh/vim-workspace'
 
 " Reabre los archivos en el punto donde los dejaste
-Plug 'farmergreg/vim-lastplace'
+" Plug 'farmergreg/vim-lastplace'
 
 " Pone el código bonito
 Plug 'zeekay/vim-beautify'
@@ -76,9 +77,17 @@ Plug 'zeekay/vim-beautify'
 " Pug
 Plug 'digitaltoad/vim-pug'
 
+" wintabs
+Plug 'zefei/vim-wintabs'
+Plug 'zefei/vim-wintabs-powerline'
+
+" Guardar sesiones en vim
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-session'
+
 call plug#end()
 
-colorscheme gruvbox
+colorscheme monokai
 let g:gruvbox_contrast_dark="hard"
 let NERDTreeQuitOnOpen=1
 
@@ -97,12 +106,10 @@ nmap <Leader>gg :GitGutterLineNrHighlightsToggle<CR>
 
 vmap ++ <Plug>NERDCommenterToggle
 
-" NERDTree tabs comfig
-nmap <Leader>tt :tabs<CR>
-nmap <Leader>tf :tabfirst<CR>
-nmap <Leader>tl :tablast<CR>
-nmap <Leader>tn :tabn<CR>
-nmap <Leader>tp :tabp<CR>
+" Wintabs tabs config
+nmap <C-H> <Plug>(wintabs_previous)
+nmap <C-L> <Plug>(wintabs_next)
+nmap <C-C> <Plug>(wintabs_close)
 
 " NERDTreee highlight config
 " Sincronizar archivo abierto con NERDTree
@@ -134,4 +141,6 @@ let g:coc_global_extensions = [
 " Workspace config
 nnoremap <leader>s :ToggleWorkspace<CR>
 
+" Prueba de test 
+nmap <Leader>llt :! PORT=8999 NODE_ENV=test mocha --config mocha.conf.js --exit %<CR>
 
