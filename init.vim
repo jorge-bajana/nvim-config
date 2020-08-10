@@ -7,7 +7,7 @@ set showcmd
 set ruler
 set encoding=utf-8
 set showmatch
-set sw=2
+set tabstop=2 shiftwidth=2 expandtab
 set relativenumber
 
 set laststatus=2
@@ -85,6 +85,14 @@ Plug 'zefei/vim-wintabs-powerline'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
 
+" Desarrollo en React
+Plug 'jelera/vim-javascript-syntax'
+Plug 'mxW/vim-jsx'
+Plug 'elzr/vim-json'
+
+" Emmet en vim
+Plug 'mattn/emmet-vim'
+
 call plug#end()
 
 colorscheme monokai
@@ -107,9 +115,9 @@ nmap <Leader>gg :GitGutterLineNrHighlightsToggle<CR>
 vmap ++ <Plug>NERDCommenterToggle
 
 " Wintabs tabs config
-nmap <C-H> <Plug>(wintabs_previous)
-nmap <C-L> <Plug>(wintabs_next)
-nmap <C-C> <Plug>(wintabs_close)
+nmap <Leader>hh <Plug>(wintabs_previous)
+nmap <Leader>ll <Plug>(wintabs_next)
+nmap <Leader>wc <Plug>(wintabs_close)
 
 " NERDTreee highlight config
 " Sincronizar archivo abierto con NERDTree
