@@ -1,3 +1,4 @@
+" To use this file, need to create a symlink to this file in .config/nvim
 set number
 set mouse=a
 set numberwidth=1
