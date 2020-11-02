@@ -114,6 +114,7 @@ nmap <Leader>w :w<CR>
 nmap <Leader>gg :GitGutterLineNrHighlightsToggle<CR>
 
 vmap ++ <Plug>NERDCommenterToggle
+vmap <Leader>yy "*y
 
 " Wintabs tabs config
 nmap <Leader>hh <Plug>(wintabs_previous)
